@@ -2,52 +2,153 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Booking</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: black;
+      color: yellow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* padding: 12px 20px; */
+    }
+
+    .navbar img {
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    /* Card */
+    .card {
+      width: 500px;
+      height: 500px;
+      background: #fff;
+      margin: 30px auto;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+    }
+
+    .card h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Form + Image layout */
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    /* Form */
+    form {
+      flex: 1;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    form input,
+    form select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .gender-group {
+      display: flex;
+      gap: 15px;
+      /* margin-top: 8px; */
+    }
+
+    form button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background: black;
+      color: yellow;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+
+    /* Side Image */
+    .side-img img {
+      border-radius: 8px;
+      height: 340px;
+      width: 180px;
+      object-fit: fit;
+    }
+  </style>
 </head>
 
 <body>
-    <div style="width: 500px; height: 500px;background-color: rgb(255, 255, 255); margin: auto; border: 2px solid black;box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
-        <div style="width: 500px; height: 40px; background-color: rgb(218, 152, 22);">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlE3wQ7s2D2Rw8ae4ezaQJA1Pj8YAR0Iom8Q&s"
-                width="40px" height="40px" style="border-radius: 50%;"><strong style="font-size: 30px;">Bus Booking</strong>
+  <!-- Navbar -->
+  <div class="navbar">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlE3wQ7s2D2Rw8ae4ezaQJA1Pj8YAR0Iom8Q&s" width="40"
+      height="40">
+    <h2>Bus Booking</h2>
+  </div>
+
+  <!-- Card -->
+  <div class="card">
+    <h2>Welcome to Bus Booking System</h2>
+    <div class="content">
+      <!-- Form -->
+      <form>
+        <label>User Details</label>
+
+        <label>Enter your Name</label>
+        <input type="text" placeholder="Your name...">
+
+        <label>Enter your Password</label>
+        <input type="password" placeholder="Your password...">
+
+        <label>Your Gender</label>
+        <div class="gender-group">
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
         </div>
-        <div>
-            <h2>Welcome to Bus Booking System</h2>
-            <div style="display: flex;">
 
-                <div>
+        <label>Select your City</label>
+        <select>
+          <option value="select">Select</option>
+          <option value="delhi">Delhi</option>
+          <option value="pune">Pune</option>
+          <option value="bangalore">Bangalore</option>
+          <option value="mumbai">Mumbai</option>
+        </select>
 
+        <button type="submit">Submit</button>
+      </form>
 
-
-                    <form style="padding: 5px 5px;">
-                        <label style="text-decoration: underline;">User Details</label><br><br>
-                        <label>Enter your Name</label>
-                        <input type="text" placeholder="your name..."><br />
-                        <label>Enter your Password</label>
-                        <input type="password" placeholder="your password..."><br />
-                        <label>Select your city</label>
-                        <select>
-                            <option value="select">Select</option>
-                            <option value="delhi">Delhi</option>
-                            <option value="pune">Pune</option>
-                            <option value="bangalore">Bangalore</option>
-                            <option value="mumbai">Mumbai</option>
-                        </select>
-
-                    </form>
-                </div>
-                <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlE3wQ7s2D2Rw8ae4ezaQJA1Pj8YAR0Iom8Q&s"
-                        width="160px" height="240px">
-
-                </div>
-            </div>
-
-
-        </div>
+      <!-- Side Image -->
+      <div class="side-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlE3wQ7s2D2Rw8ae4ezaQJA1Pj8YAR0Iom8Q&s">
+      </div>
     </div>
+  </div>
 </body>
 
 </html>
