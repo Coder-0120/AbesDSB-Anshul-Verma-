@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Menu</title>
+  <style>
+    body {
+      background-color: #fff8f0; 
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      height: 370px;
+      width: 280px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(244, 179, 131, 0.15);
+      font-size: 18px;
+      padding: 15px;
+      margin: 10px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    img {
+      height: 180px;
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border: none;
+      object-fit: cover;
+    }
+
+    h2 {
+      margin: 8px 0;
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      margin: 5px 0 15px 0;
+    }
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+      transition: background 0.2s;
+    }
+
+    .add-btn {
+      background-color: #e63946;
+      color: white;
+    }
+
+    .add-btn:hover {
+      background-color: #c92d3a;
+    }
+
+    .order-btn {
+      background-color: #2a9d8f;
+      color: white;
+    }
+
+    .order-btn:hover {
+      background-color: #21867a;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <img
+        src="https://www.foodandwine.com/thmb/XE8ubzwObCIgMw7qJ9CsqUZocNM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/MSG-Smash-Burger-FT-RECIPE0124-d9682401f3554ef683e24311abdf342b.jpg">
+      <h2>Burger</h2>
+      <p>Price: 50RS</p>
+      <div>
+        <button class="add-btn">Add</button>
+        <button class="order-btn">Order</button>
+      </div>
+    </div>
+
+    <div class="box">
+      <img
+        src="https://b.zmtcdn.com/data/pictures/chains/2/20172/ce0341e58cf96f163101b4dff77ed938.jpg?fit=around|960:500&crop=960:500;*,*">
+      <h2>Pizza</h2>
+      <p>Price: 150RS</p>
+      <div>
+        <button class="add-btn">Add</button>
+        <button class="order-btn">Order</button>
+      </div>
+    </div>
+
+    <div class="box">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRviaHJ7pOcXEfLZNR1mJyVmELmZKnYjD-3Iw&s">
+      <h2>Coca Cola</h2>
+      <p>Price: 40RS</p>
+      <div>
+        <button class="add-btn">Add</button>
+        <button class="order-btn">Order</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
