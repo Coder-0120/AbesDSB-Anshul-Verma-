@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        #main_cont{
+            display: flex;
+        }
+        #box{
+            height: 410px;
+            width: 410px;
+            margin: auto;
+            background-color: rgb(126, 211, 251);
+            border: 4px solid rgb(3, 91, 94);
+        }
+        #head{
+            display: flex;
+            gap: 20px;
+        }
+      
+        #mid_head{
+            display: flex;
+            margin: 100px;
+
+        }
+        #foot{
+            display: flex;
+            gap: 50px;
+            margin-top: -20px;
+            margin-left: 120px;
+        }
+        #count_show{
+            height: 50px;
+            width: 60px;
+            background-color: rgb(5, 86, 106);
+            text-align: center;
+            margin-left: 60px;
+            color: white;
+
+        }
+        button{
+            background-color: rgb(16, 107, 144);
+            color: white;
+            font-size: 30px;
+            font-weight: 500px;
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+        }
+        #box2{
+            margin-top: 20px;
+             height: 410px;
+            width: 400px;
+            margin: auto;
+            background-color: rgb(126, 211, 251);
+            border: 4px solid rgb(3, 91, 94);
+
+        }
+        #box3{
+            margin-top: 20px;
+            height: 410px;
+            width: 410px;
+            margin: auto;
+            background-color: rgb(126, 211, 251);
+            border: 4px solid rgb(3, 91, 94);
+
+        }
+        #img2 , #img3{
+            width: 410px;
+            height: 300px;
+        }
+        #btn2 , #btn3{
+            margin-left: 150px;
+            margin-top: 20px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var count=0;
+        var val=document.getElementById("count_show").value;
+        function  incre(){
+            if(count<10 ){
+                count++;
+                document.getElementById("count_show").innerHTML=(count);
+
+            }
+            else{
+                alert("maximum reached")
+            }
+        }
+        function  decre(){
+            if(count>0){
+                count--;
+                document.getElementById("count_show").innerHTML=(count);
+
+            }
+            else{
+                alert("minimum limit")
+            }
+        }
+        function hide(){
+            document.getElementById("img3").style.backgroundImage="";
+        }
+        function Change(){
+            document.getElementById("img2").style.backgroundImage="url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRf14nYYtfFQqtYMy6Z-Gx6hCz_bFhv1MSoYlwGLPA9PpsazGFXB7vMeT5JyvCJwLhvPkPDq6selilftkZBI1lucSnsDUOIWxN6tAfbRS63g)";
+        }
+    </script>
+   <div id="main_cont">
+
+    <div id="box">
+        <div id="head">
+            <img id="img" src="data:image/png;base64,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" width="50px" height="50px" style="margin-left: 20px;margin-top: 20px;">
+            <h1>Counter App</h1>
+        </div>
+        <div id="mid_head">
+            <h1 id="count_show">0</h1>
+        </div>
+        <div id="foot">
+            <button onclick="incre()">+</button>
+            <button onclick="decre()">-</button>
+        </div>
+
+    </div>
+
+    <div id="box2">
+        <div id="box2_img">
+            <div id="img2" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDEmAZm-5aSX4KovG-R_IJ_XZqRLMmyEY8uQ89tgMdHdxECL9OOcXGkggWJ3wYaSSFfwJzk7wzleSjW4lHTS75K1bDdR_q-IKRif3TMrub);" style="background-repeat: no-repeat;">
+
+            </div>
+
+        </div>
+        <div>
+            <button id="btn2" onclick="Change()">Change</button>
+        </div>
+    </div>
+   </div>
+    <div id="box3">
+        <div id="box2_img">
+            <div id="img3" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDEmAZm-5aSX4KovG-R_IJ_XZqRLMmyEY8uQ89tgMdHdxECL9OOcXGkggWJ3wYaSSFfwJzk7wzleSjW4lHTS75K1bDdR_q-IKRif3TMrub);" style="background-repeat: no-repeat;">
+
+            </div>
+
+        </div>
+        <div>
+            <button id="btn3" onclick="hide()">hide</button>
+        </div>
+    </div>
+   </div>
+    
+</body>
+</html>
