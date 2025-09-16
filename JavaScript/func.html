@@ -5,16 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <style>
+<body id="body_id">
+
+    <script>
+        function red(){
+            document.getElementById("body_id").style.backgroundColor="red";
+        }
+        function yellow(){
+            document.getElementById("body_id").style.backgroundColor="yellow";
+        }
+        function green(){
+            document.getElementById("body_id").style.backgroundColor="green";
+        }
+        function blue(){
+            document.getElementById("body_id").style.backgroundColor="blue";
+        }
+    </script>
+    <button onclick="red()">red</button>
+    <button onclick="yellow()">yellow</button>
+    <button onclick="green()">green</button>
+    <button onclick="blue()">blue</button>
+
+    <!-- <style>
         #ansh{
             height: 300px;
             width: 300px;
             background-color: yellow;
             border: 2px solid red;
         }
-    </style>
-    <script>
+    </style> -->
+    <!-- <script>
         function abes()
         {
             document.write("Abes is best");
@@ -36,11 +56,11 @@
             document.getElementById("msg").innerHTML="<h1>hello Abes</h1>"
         }
 
-    </script>
-    <div id="ansh">
+    </script> -->
+    <!-- <div id="ansh">
         <button onclick="writemsg()">click</button>
         <p id="msg"></p>
 
-    </div>    
+    </div>     -->
 </body>
 </html>
