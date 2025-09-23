@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Boxes</title>
+  <style>
+   
+
+    .main_cont {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .box1,
+    .box2 {
+      flex: 1;
+      max-width: 250px;
+      height: auto;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      background: #fff5e6;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .box1 {
+      background: linear-gradient(135deg, #f7c471, #e29d45);
+    }
+
+    .box2 {
+      background: linear-gradient(135deg, #ffdd8d, #d9991c);
+    }
+
+    .box-title {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 12px;
+      color: #222;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .student {
+      background: rgba(255, 255, 255, 0.6);
+      margin: 6px 0;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: transform 0.2s ease, background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .student:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.85);
+    }
+  </style>
 </head>
+
 <body>
-    
+
+  <div class="main_cont">
+    <div class="box1" id="box1">
+      <div class="box-title">IT Students</div>
+    </div>
+    <div class="box2" id="box2">
+      <div class="box-title">CSE Students</div>
+    </div>
+  </div>
+
+  <script>
+    const student = [
+      { name: "Anshul", Branch: "B-TEch", Course: "IT", RollNO: 1 },
+      { name: "Aman", Branch: "B-TEch", Course: "IT", RollNO: 2 },
+      { name: "Ayush", Branch: "B-TEch", Course: "IT", RollNO: 3 },
+      { name: "Ansh", Branch: "B-TEch", Course: "CSE", RollNO: 4 },
+      { name: "Arun", Branch: "B-TEch", Course: "CSE", RollNO: 5 },
+    ];
+
+    const box1 = document.getElementById("box1");
+    const box2 = document.getElementById("box2");
+
+    student.forEach(stu => {
+      let div = document.createElement("div");
+      div.className = "student";
+      div.textContent = `${stu.name} (RollNo: ${stu.RollNO})`;
+
+      if (stu.Course === "IT") {
+        box1.appendChild(div);
+      } else if (stu.Course === "CSE") {
+        box2.appendChild(div);
+      }
+    });
+  </script>
+
 </body>
+
 </html>
