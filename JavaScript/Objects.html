@@ -7,6 +7,7 @@
 </head>
 <body>
     <p id="para"></p>
+    <p id="para2"></p>
     <script>
         // objects without new keyword
         const person={
@@ -17,6 +18,18 @@
             College:"Abes"
         }
         document.getElementById("para").innerHTML=person.Name;
+
+        // objects with new keyword
+           const person2=new Object({
+            Name:"Anshul",
+            Age:20,
+            Branch:"CSE-DS",
+            Year:3,
+            College:"Abes"
+        })
+        document.getElementById("para2").innerHTML=person2.Age;
+
+
 
     </script>
     
