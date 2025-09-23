@@ -7,10 +7,18 @@
 </head>
 <body>
     <p id="para"></p>
+    <p id="para2"></p>
     <script>
-        const toy=["toy1","toy2","toy3"];
-        toy[2]="Teddy";
-        document.getElementById("para").innerHTML=toy
+        const toy=["toy1","toy2","toy3"];// without object
+        toy[2]="Teddy";//change value
+        // document.getElementById("para").innerHTML=toy
+        document.getElementById("para").innerHTML=toy[0]
+
+        //creating arrays with object
+        const fruits=new Array( "Apple","Mango","Grapes");
+        document.getElementById("para2").innerHTML=fruits
+
+        
 
     </script>
     
