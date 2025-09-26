@@ -8,15 +8,34 @@
 <body>
     <script>
         // cause all print together without getting delay of 2 sec for each call
-        function getdata(dataId){
+        // function getdata(dataId){
+        //     setTimeout(()=>{
+        //         console.log("data",dataId)
+        //     },2000)
+
+        // }
+        // getdata(1)
+        // getdata(2)
+        // getdata(3)
+
+         function getdata(dataId,getnextdata){
             setTimeout(()=>{
-                console.log("data",dataId)
+                console.log("data",dataId);
+                if(getnextdata){
+                    getnextdata();
+                }
             },2000)
 
         }
-        getdata(1)
-        getdata(2)
-        getdata(3)
+        getdata(1,()=>{
+            getdata(2,()=>{
+                getdata(3,()=>{
+                    getdata(4);
+                })
+            })
+        })
+       
+
 
     </script>
     
