@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const mypromise=new Promise((reolve,reject)=>{
+            const pwd="ansh@12";
+            if(pwd.length>8){
+                reolve("length is okay");
+            }
+            else{
+                reject("length is not okay");
+            }
+
+        })
+        mypromise.then((msg)=>{
+            document.write(msg);
+        })
+        mypromise.catch((msg)=>{
+            alert(msg);
+        })
+
+    </script>
+    
+</body>
+</html>
