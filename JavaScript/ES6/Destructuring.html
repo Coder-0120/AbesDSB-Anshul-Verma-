@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"></p>
+    <script>
+        const person={
+            name:"Anshul Verma",
+            rollno:37,
+            age:20,
+            course:"B-Tech",
+            Branch:"CSE-DS"
+        }
+
+        let {age,name,Branch}=person;
+        document.getElementById("para").innerHTML=person.Branch
+        alert(age) // destructure value
+
+    </script>
+    
+</body>
+</html>
