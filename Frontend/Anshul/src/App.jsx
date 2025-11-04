@@ -2,16 +2,20 @@ import React from 'react'
 import Card from './Components/Card'
 import Navbar from './Components/Navbar'
 import "./App.css"
+import Count from './Components/Count'
 
 const App = () => {
   return (
-    <div id='container'>
+    <div >
       <Navbar/>
-      <Card/>
+      <Count/>
+
+      {/* <Card name='Anshul' edu='10th'/>
       <br/>
-      <Card/>
+      <Card name='Aman' edu='12th'/>
       <br/>
-      <Card/>
+      <Card name='Ansh' edu='Btech'/> */}
+
     </div>
   )
 }
