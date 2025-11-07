@@ -1,0 +1,13 @@
+#book{
+    border:5px solid rgb(250, 165, 19);
+    background-color: rgb(255, 223, 162);
+    width: 300px;
+    border-radius: 20px;
+    height: 300px;
+    
+}
+img{
+    border-radius: 30px;
+    border: 1px solid black;
+    margin-top: 20px;
+}
