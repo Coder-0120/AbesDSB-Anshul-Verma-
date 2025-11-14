@@ -1,0 +1,9 @@
+#card{
+    border: 5px solid rgb(244, 203, 68);
+    height: 300px;
+    width: 289px;
+    text-align: center;
+}
+img{
+    margin-top: 15px;
+}
