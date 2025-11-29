@@ -1,0 +1,87 @@
+/* Full page container */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fdf6e3;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Login box */
+.login-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+/* Title */
+.login-title {
+  text-align: center;
+  color: #b37400;
+  margin-bottom: 20px;
+}
+
+/* Form layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.login-label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Inputs */
+.login-input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  transition: border 0.3s;
+}
+
+.login-input:focus {
+  border-color: #b37400;
+  outline: none;
+}
+
+/* Button */
+.login-button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #b37400;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background-color: #996300;
+}
+
+/* Bottom text */
+.login-text {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Link */
+.login-link {
+  color: #b37400;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
