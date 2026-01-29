@@ -1,15 +1,9 @@
 import React from 'react'
-import Book from './Components/Book'
-import Navbar from './Components/Navbar'
-import "./App.css"
-import RegisterPage from './Components/RegisterPage'
-const App = () => {
+import Book from './Book'
+
+const BookCollections = () => {
   return (
-    <>
-      {/* <Navbar/> */}
-      <RegisterPage/>
-      
-    <div>
+     <div>
 
         <h1 style={{textAlign:"center"}} >All Books</h1>
 
@@ -21,8 +15,7 @@ const App = () => {
       <Book name='Chemistry' price='400' img='https://tse1.mm.bing.net/th/id/OIP.5cRLXmZbUJ_7m9H6Vn-4gwHaJZ?pid=Api&P=0&h=180'/>
     </div>
     </div>
-    </>
   )
 }
 
-export default App
+export default BookCollections
