@@ -2,12 +2,14 @@ import React from 'react'
 import Book from './Components/Book'
 import Navbar from './Components/Navbar'
 import "./App.css"
-import RegisterPage from './Components/RegisterPage'
+import RegisterPage from './Components/RegisterPage';
+import Login from './Components/LoginPage';
 const App = () => {
   return (
     <>
-      {/* <Navbar/> */}
+      <Navbar/>
       <RegisterPage/>
+      <Login/>
       
     <div>
 
