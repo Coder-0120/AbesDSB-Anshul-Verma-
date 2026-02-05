@@ -1,0 +1,17 @@
+import os from 'os';
+console.log("platform is "+os.platform());
+console.log("arch is "+ os.arch());
+console.log("os.cpus():", os.cpus());
+console.log("free memory:", os.freemem());
+console.log("total memory:", os.totalmem()); 
+console.log("home dir is "+ os.homedir());
+console.log("uptime is "+ os.uptime()+" seconds");
+console.log("network interfaces:", os.networkInterfaces());
+console.log("temporary directory is "+ os.tmpdir());
+console.log("os.type() is "+ os.type());
+console.log("os.release() is "+ os.release());
+console.log("os.version() is "+ os.version());
+console.log("os.endianness() is "+ os.endianness());
+console.log("os.hostname() is "+ os.hostname());
+console.log("os.loadavg() is "+ os.loadavg());
+console.log("os.EOL is "+ JSON.stringify(os.EOL));
