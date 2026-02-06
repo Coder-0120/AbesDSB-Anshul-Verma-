@@ -26,6 +26,19 @@ const server=http.createServer((req,res)=>{
             }
         })
     }
+    else if(req.url==='/style.css'){
+        fs.readFile('style.css','utf-8',(err,data)=>{
+            if(err){
+                res.statusCode=500;
+                res.end('Internal Server Error');
+            }
+            else{
+                res.setHeader('Content-Type','text/css');
+                res.statusCode=200;
+                res.end(data);
+            }
+        })
+    }
     else{
         res.statusCode=404;
         res.end('Page not found');
