@@ -1309,19 +1309,145 @@ td.td-id {
 .toast-icon.info    { background: var(--cyan-g);     color: var(--cyan); }
 
 /* ════════════════════════════════════════════
-   RESPONSIVE
+   RESPONSIVE — FULL MOBILE FIRST
 ════════════════════════════════════════════ */
-@media (max-width: 1100px) {
+
+/* ── Hamburger button (hidden on desktop) ── */
+.hamburger {
+  display: none;
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: var(--bg-2);
+  border: 1px solid var(--border-1);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--t3);
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+.hamburger:hover { background: var(--bg-3); color: var(--t1); }
+
+/* ── Sidebar overlay (mobile) ── */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  z-index: 99;
+  animation: fadeIn 0.2s ease;
+}
+.sidebar-overlay.visible { display: block; }
+
+/* ── 1280px: tighten layout ── */
+@media (max-width: 1280px) {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .form-grid  { grid-template-columns: repeat(2, 1fr); }
-  .field-group.span-3 { grid-column: span 2; }
 }
 
-@media (max-width: 768px) {
+/* ── 1100px: tablet landscape ── */
+@media (max-width: 1100px) {
+  :root { --sidebar-w: 220px; }
+  .form-grid  { grid-template-columns: repeat(2, 1fr); }
+  .field-group.span-3 { grid-column: span 2; }
+  .topbar-search { width: 220px; }
+}
+
+/* ── 900px: tablet portrait ── */
+@media (max-width: 900px) {
   :root { --sidebar-w: 0px; }
-  .sidebar { transform: translateX(-260px); }
-  .stats-grid { grid-template-columns: 1fr 1fr; }
-  .page-body  { padding: 20px 16px 60px; }
-  .topbar     { padding: 0 16px; }
-  .topbar-search { width: 200px; }
+
+  .hamburger { display: flex; }
+
+  .sidebar {
+    width: 260px;
+    transform: translateX(-260px);
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), background 0.35s ease;
+    z-index: 200;
+    box-shadow: none;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: 4px 0 40px rgba(0,0,0,0.5);
+  }
+
+  .main-content { margin-left: 0; }
+
+  .topbar { padding: 0 16px; gap: 10px; }
+  .topbar-title span { display: none; }
+  .topbar-search { width: 180px; }
+
+  .page-body { padding: 20px 16px 60px; gap: 18px; }
+
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+  .form-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .field-group.span-2,
+  .field-group.span-3 { grid-column: span 2; }
+
+  .form-body { padding: 20px; }
+  .form-footer { padding: 14px 20px; flex-wrap: wrap; gap: 10px; }
+  .form-hint { width: 100%; }
+  .btn-group { width: 100%; justify-content: flex-end; }
+
+  .panel-header { padding: 16px 20px; flex-wrap: wrap; gap: 10px; }
+
+  .table-controls { flex-wrap: wrap; gap: 10px; padding: 14px 16px; }
+  .filter-pills { display: none; }
+
+  .highlight-card { margin: 12px 16px 0; flex-wrap: wrap; }
+
+  .table-footer { padding: 12px 16px; flex-wrap: wrap; gap: 8px; }
+
+  .toast-container { bottom: 16px; right: 16px; left: 16px; }
+  .toast { min-width: unset; }
+}
+
+/* ── 600px: mobile ── */
+@media (max-width: 600px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .stat-value { font-size: 1.7rem; }
+  .stat-card  { padding: 16px; }
+
+  .topbar-search { display: none; }
+  .topbar-title  { font-size: 0.92rem; }
+
+  .form-grid { grid-template-columns: 1fr; }
+  .field-group.span-2,
+  .field-group.span-3 { grid-column: span 1; }
+
+  .mode-toggle { display: none; }
+
+  .panel-title { font-size: 0.82rem; }
+
+  /* table: hide less critical columns */
+  table th:nth-child(4),
+  table td:nth-child(4),
+  table th:nth-child(6),
+  table td:nth-child(6) { display: none; }
+
+  .name-sub { display: none; }
+
+  .table-footer-info { font-size: 0.72rem; }
+
+  .btn { padding: 9px 16px; font-size: 0.8rem; }
+
+  .highlight-card { padding: 12px 14px; gap: 10px; }
+  .highlight-tags { display: none; }
+}
+
+/* ── 400px: small phones ── */
+@media (max-width: 400px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .stat-value { font-size: 1.5rem; }
+
+  .page-body { padding: 14px 12px 60px; gap: 14px; }
+
+  table th:nth-child(3),
+  table td:nth-child(3) { display: none; }
+
+  .actions-cell { gap: 4px; }
+  .btn-warning-sm,
+  .btn-danger-sm { padding: 5px 9px; font-size: 0.7rem; }
 }
