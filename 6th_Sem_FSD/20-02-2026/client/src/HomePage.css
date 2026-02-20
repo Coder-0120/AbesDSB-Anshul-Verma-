@@ -217,7 +217,7 @@
 body {
   font-family: 'Outfit', sans-serif;
   background: var(--bg-0);
-  color: var(--t1);
+  color: var(--t30);
   min-height: 100vh;
   overflow-x: hidden;
   transition: background 0.35s ease, color 0.35s ease;
