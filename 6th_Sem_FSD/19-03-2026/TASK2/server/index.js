@@ -12,9 +12,7 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.method === "POST" && req.url === "/login") {
-
     let body = "";
-
     req.on("data", chunk => body += chunk);
 
     req.on("end", () => {
